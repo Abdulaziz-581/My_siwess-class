@@ -1,0 +1,57 @@
+#dictionary of student entery.
+import time 
+print("\n")
+
+rosemary = {"Fullname":"Rosemary John","Registration num":"FPI/HND/EEE/23/011","Grade":"A","Score":81,"GPA":3.56}
+
+john = {"Fullname":"John Fredrick","Registration number":"FPI/HND/EEE/23/012","Grade":"BC","Score":60,"GPA":3.36}
+
+abdul = {"Fullname":"Abdulmajeed Haruna","Registration number":"FPI/HND/EEE/23/041","Grade":"A","Score":81,"GPA":3.76}
+
+students = ["rosemary","john","abdul"]
+
+print("\n")
+
+print("Hello this program manages student data.")
+time.sleep(1)
+print("MENU")
+print("1. View student data\n2. Edit student data\n3. Delete student data\n\n")
+
+user_input=input("select entry: ")
+print(f"you have enter{user_input}")
+time.sleep(1)
+
+if user_input == "1":
+   print("Select student to view their data")
+elif user_input == "2":
+   print("Select student to edit their data")
+elif user_input == "3":
+   print("Select student to delete their data")
+else:
+    user_input =input("Wrong entery, please try again: ")
+
+
+print("Serial \t Name")
+for name in students:
+   serial_num=students.index(name)+1
+   print(f"{serial_num}\t{name.title()}")
+   time.sleep(0.5)
+selected_student = input("Enter student serial: ")
+if selected_student == "1":
+   print("Rosemary data:\n")
+   for data,value in rosemary.items():
+    print(f"{data}:{value}")
+    time.sleep(1)
+elif selected_student == "2":
+   print("John data:\n")
+   for data,value in john.items():
+    print(f"{data}:{value}")
+    time.sleep(1)
+elif selected_student == "3":
+   print("Abdul data:\n")
+   for data,value in abdul.items():
+    print(f"{data}:{value}")
+    time.sleep(1)
+else:
+    print("Student serial entered not found, please try again")
+    
