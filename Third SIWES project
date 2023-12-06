@@ -1,0 +1,16 @@
+#A program to generate registration numbe
+def gen_reg_number(school,level,department,session,student_id):
+    student_data = student_id
+    return student_id
+        
+def school_fee_paid(student_id):     
+    if student_id["school_fee_paid"]=="paid":
+       return True
+    else:
+       return False
+     
+       print("\n")
+student_data = {"school":"FPI","level":"NDII","department":"COM","session":22,"student_id":92,"school_fee_paid":"paid"}
+
+print(school_fee_paid(student_data))
+    
